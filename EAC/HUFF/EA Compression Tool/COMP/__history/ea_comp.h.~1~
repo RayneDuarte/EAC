@@ -1,0 +1,9 @@
+//---------------------------------------------------------------------------
+
+#ifndef ea_compH
+#define ea_compH
+//---------------------------------------------------------------------------
+#endif
+
+int ea_comp(unsigned char *in, int insz, unsigned char *out, int outsz);
+
