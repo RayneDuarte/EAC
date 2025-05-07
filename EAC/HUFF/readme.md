@@ -12,7 +12,7 @@ outfile= name of the file that will be contain the decompressed data
 
 ---------------------------------------------------------------------
 Example of usage to compress a file using the HUFF compression:
-ea_compression_tool.exe -c -0 HUFF infile outfile
+ea_compression_tool.exe -c HUFF -0 infile outfile
 
 Compress using the HUFF compression the infile data and save the
 compressed data to outfile. The -0 compress the data with the HUFF

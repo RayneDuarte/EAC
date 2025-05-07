@@ -1,3 +1,12 @@
+// If the compiler mostly UNIX compatible
+#if defined __unix__ || defined __MINGW32__ || defined __MINGW64__
+	#define EAC_UNIX
+#endif
+
+#ifdef EAC_UNIX
+	#include "eac_unix.cpp"
+#endif
+
 #include <iostream>
 #include <tchar.h>
 #include "codex.h"
@@ -335,7 +344,11 @@ int GetFilesize(FILE *f)
 void Help()
 {
 	printf("\nEA Compression Tool\n\n");
-	wprintf(L"Coded by Raynê Games\n\n");
+	#ifndef EAC_UNIX
+		wprintf(L"Coded by Raynê Games\n\n");
+	#else
+		printf("Coded by Rayne Games\n\n");
+	#endif
 	printf("WARNING: Contains proprietary code of EA!!\n\n");
 	printf("Use this tool to encode/decode the files compressed in HUFF, JDLZ, REF and BTREE formats.\n\n");
 	printf("The JDLZ compression is based on LZMA and it is often used to compress VPAK files\n");
@@ -353,7 +366,7 @@ void Help()
 	printf("-1: 0x32fb header. Probably used in other EA games\n");
     printf("-2: 0x34fb header. Probably used in other EA games\n");
 	printf("\n\nExample:\n");
-	printf("ea_compression_tool.exe -c -0 HUFF infile outfile\n");
+	printf("ea_compression_tool.exe -c HUFF -0 infile outfile\n");
 	printf("The args above compress the input file with the HUFF compression and save the data to output file.\n");
 	printf("The file is compressed with the -0 variant, 0x30fb header\n");
 	printf("\n\nTo decompress a file, select the -d mode and the infile name and the outfile name\n");
