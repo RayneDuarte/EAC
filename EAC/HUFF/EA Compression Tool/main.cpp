@@ -366,7 +366,7 @@ void Help()
 	printf("-1: 0x32fb header. Probably used in other EA games\n");
     printf("-2: 0x34fb header. Probably used in other EA games\n");
 	printf("\n\nExample:\n");
-	printf("ea_compression_tool.exe -c -0 HUFF infile outfile\n");
+	printf("ea_compression_tool.exe -c HUFF -0 infile outfile\n");
 	printf("The args above compress the input file with the HUFF compression and save the data to output file.\n");
 	printf("The file is compressed with the -0 variant, 0x30fb header\n");
 	printf("\n\nTo decompress a file, select the -d mode and the infile name and the outfile name\n");
