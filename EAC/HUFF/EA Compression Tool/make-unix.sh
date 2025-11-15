@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-gcc \
+g++ \
 	-I. \
 	-IUNIX \
 	-IHUFF \
@@ -11,4 +11,5 @@ gcc \
 	-static-libgcc \
 	-static-libstdc++ \
 	-static \
+	-fpermissive \
 	main.cpp -oea_compression_tool
