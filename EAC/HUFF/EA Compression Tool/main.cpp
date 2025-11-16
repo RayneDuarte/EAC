@@ -345,7 +345,7 @@ void Help()
 {
 	printf("\nEA Compression Tool\n\n");
 	#ifndef EAC_UNIX
-		wprintf(L"Coded by Raynê Games\n\n");
+		wprintf(L"Coded by Raynï¿½ Games\n\n");
 	#else
 		printf("Coded by Rayne Games\n\n");
 	#endif
