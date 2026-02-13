@@ -35,7 +35,7 @@ int COMP_Encoder::COMP_encode(const unsigned char *src, int sourcesize, unsigned
 				int k = 0;
 				while (k < 18 &&
 					   pos + k < sourcesize &&
-					   src[j + k] == src[pos + k])
+					   j + k < sourcesize && srcsrc[j + k] == src[pos + k])
 				{
 					k++;
 				}
@@ -89,4 +89,5 @@ void COMP_Encoder::COMP_createHeader(unsigned char *hdr, int usize, int zsize)
 	*h++ = usize;
 	*h = (zsize + 16);
 }
+
 
