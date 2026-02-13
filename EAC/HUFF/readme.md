@@ -1,4 +1,4 @@
-EA Compression Tool by Raynê Games
+EA Compression Tool
 
 Tool to compress/decompress the files with JDLZ, HUFF, REFPACK and BTREE
 compression used in many EA games. The tool supports compress files to JDLZ,
@@ -28,3 +28,4 @@ compressed data to outfile
 ---------------------------------------------------------------------
 More details about the other compression formats, use the -h option
 ea_compression_tool.exe -h
+
